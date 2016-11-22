@@ -40,12 +40,10 @@ namespace Assignment10Group1
             ue.emp = em.DisplaySelectedEmpoyee();
             ue.setData();
             ue.ShowDialog();
-
-        }
-
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
-        {
             dgEmployee.Items.Refresh();
+
         }
+
+      
     }
 }
