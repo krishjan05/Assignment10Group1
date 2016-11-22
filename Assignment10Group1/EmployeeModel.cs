@@ -18,22 +18,32 @@ namespace Assignment10Group1
             set { _employee = value; OnPropertyChanged(); }
         }private List<Employee> _employee;
 
-        public Employee e
+        public Employee selectedEmployee
         {
-            get { return _e; }
-            set { _e = value; OnPropertyChanged(); }
-        }private Employee _e;
+            get { return _selectedEmployee; }
+            set
+            {
+                _selectedEmployee = value;
+                if(_selectedEmployee != value)
+                {
+                    OnPropertyChanged();
+                }
+            }
+        }private Employee _selectedEmployee;
+
 
         public void DisplayEmployee()
         {
             SQLdb = SQLiteDatabase.GetInstance();
             _employee = SQLdb.GetEmployees();
         }
-       /* public void DisplaySelectedEmpoyee()
+        public Employee DisplaySelectedEmpoyee()
         {
             SQLdb = SQLiteDatabase.GetInstance();
-            _e = SQLdb.GetEmployee(_e.employeeID);
-        }*/
+            //_selectedEmployee = SQLdb.GetEmployee();
+            selectedEmployee = _selectedEmployee;
+            return selectedEmployee;
+        }
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {

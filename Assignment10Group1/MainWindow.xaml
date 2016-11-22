@@ -21,7 +21,7 @@
                HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                FontSize="32"/>
         <DataGrid Name="dgEmployee" AutoGenerateColumns="False" ItemsSource="{Binding employee}"
-                  Grid.Column="0" Grid.Row="1" SelectedItem="{Binding e, Mode=TwoWay}">
+                  Grid.Column="0" Grid.Row="1" SelectedItem="{Binding selectedEmployee, Mode=TwoWay}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding employeeID}"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
@@ -32,7 +32,7 @@
         <Label Name="lblSelectedEmpoyee"
                Grid.Column="1" Grid.Row="1"
                Margin="10"
-               DataContext="{Binding e, Mode=TwoWay}"/>
+               DataContext="{Binding selectedEmployee, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         <Button Name="btnUpdateEmployee" Content="Update"
                 Grid.Column="0" Grid.Row="2"
                 Margin="10"

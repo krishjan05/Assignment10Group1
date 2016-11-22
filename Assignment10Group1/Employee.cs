@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment10Group1
 {
-    class Employee
+    public class Employee
     {
         public int employeeID { get; set; }
         public string name { get; set; }

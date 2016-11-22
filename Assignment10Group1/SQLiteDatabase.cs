@@ -71,7 +71,7 @@ namespace Assignment10Group1
             sdr.Close();
             return le;
         }
-        /*public Employee GetEmployee(int ID)
+        public Employee GetEmployee(int ID)
         {
             Employee e = new Employee();
             SQLiteCommand cmd = new SQLiteCommand(conn);
@@ -90,7 +90,7 @@ namespace Assignment10Group1
                 sdr.Close();
                 return e;
             }
-        }*/
+        }
         public void DeleteEmployee(Employee e)
         {
             SQLiteCommand cmd = new SQLiteCommand(conn);

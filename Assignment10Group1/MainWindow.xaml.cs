@@ -33,8 +33,14 @@ namespace Assignment10Group1
         }
 
         private void btnUpdateEmployee_Click(object sender, RoutedEventArgs e)
-        {
-           // em.DisplaySelectedEmpoyee();
+        {         
+
+          
+            UpdateEmployee ue = new UpdateEmployee();
+            ue.emp = em.DisplaySelectedEmpoyee();
+            ue.setData();
+            ue.ShowDialog();
+
         }
     }
 }
