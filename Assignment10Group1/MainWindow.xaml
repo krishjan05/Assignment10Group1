@@ -37,5 +37,10 @@
                 Grid.Column="0" Grid.Row="2"
                 Margin="10"
                 Click="btnUpdateEmployee_Click"/>
+        <Button Name="btnRefresh"
+                Content="Refresh"
+                Grid.Column="1" Grid.Row="2"
+                Click="btnRefresh_Click"
+                Margin="10"/>
     </Grid>
 </Window>

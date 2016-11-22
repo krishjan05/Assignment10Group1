@@ -42,5 +42,10 @@ namespace Assignment10Group1
             ue.ShowDialog();
 
         }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            dgEmployee.Items.Refresh();
+        }
     }
 }

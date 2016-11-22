@@ -21,6 +21,7 @@ namespace Assignment10Group1
     {
        public Employee emp;
         SQLiteDatabase SQLdb;
+        MainWindow m;
         public UpdateEmployee()
         {
             InitializeComponent();
@@ -44,6 +45,7 @@ namespace Assignment10Group1
             emp.rate = int.Parse(txtRateUpdateEmployee.Text);
             SQLdb.UpdateEmployee(emp);
             this.Close();
+
         }
     }
 }
