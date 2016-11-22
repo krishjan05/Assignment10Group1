@@ -20,9 +20,21 @@ namespace Assignment10Group1
     /// </summary>
     public partial class MainWindow : Window
     {
+        EmployeeModel em;
+        SQLiteDatabase SQLdb;
         public MainWindow()
         {
             InitializeComponent();
+            SQLdb = SQLiteDatabase.GetInstance();
+            em = new EmployeeModel();
+            DataContext = em;
+            em.DisplayEmployee();
+            
+        }
+
+        private void btnUpdateEmployee_Click(object sender, RoutedEventArgs e)
+        {
+           // em.DisplaySelectedEmpoyee();
         }
     }
 }
